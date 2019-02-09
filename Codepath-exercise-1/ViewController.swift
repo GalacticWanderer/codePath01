@@ -19,8 +19,18 @@ class ViewController: UIViewController {
     }
 
     //func to display a cutom text
+    //threw in an actionSheet alert for no reason @_@
     func setText(text: String){
         textLabel.text = "\(text)"
+        
+        //create an UIAlert
+        let alert = UIAlertController(title: "\(text)", message: "I'm an alert", preferredStyle: UIAlertController.Style.actionSheet)
+        
+        //Add action to the alert
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        //present the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     //func for the button
